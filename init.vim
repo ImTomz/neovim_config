@@ -11,9 +11,10 @@ Plug 'vim-airline/vim-airline-themes'
 "Plug 'pangloss/vim-javascript'
 "Plug 'mxw/vim-jsx'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'morhetz/gruvbox'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -40,7 +41,11 @@ set laststatus=2
 set scrolloff=10
 
 "--- Color scheme
-colorscheme gruvbox
+colorscheme onedark
+set termguicolors
+set background=dark
+let g:airline_theme='onedark'
+let g:onedark_terminal_italics=1
 
 "--- Auto tag config
 let g:closetag_filenames = '*.html,*.xhtml,*.phtmli,*.php'
