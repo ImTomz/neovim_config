@@ -4,7 +4,7 @@ call plug#begin('~/.local/share/nvim/site/autoload/plug')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'chun-yang/auto-pairs'
-"Plug 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -13,6 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 
@@ -41,23 +42,28 @@ set laststatus=2
 set scrolloff=10
 
 "--- Color scheme
-colorscheme onedark
+"colorscheme onedark
 set termguicolors
 set background=dark
-let g:airline_theme='onedark'
+"let g:airline_theme='onedark'
 let g:onedark_terminal_italics=1
 
 "--- Auto tag config
-let g:closetag_filenames = '*.html,*.xhtml,*.phtmli,*.php'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtmli,*.php,*.jsx,*.vue'
 
-"--- Fzf ctrl-p
-nnoremap <C-p> :Files<CR>
+"--- Fzf ctrl-o
+nnoremap <C-o> :Files<CR>
 "set ignore files in .zshrc 
 "export FZF_DEFAULT_COMMAND='ag --nocolor --ignore={'node_modules','bower_components'} -g ""'
+"brew install the_silver_searcher
 
 "--- Coc binds
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
+
+"--- Copy paste binds 
+vnoremap <C-c> "*y
+map <C-p> "*p
 
 "--- NerdTree
 map <F7> :NERDTreeToggle<CR>
