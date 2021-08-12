@@ -8,6 +8,8 @@ Plug 'alvan/vim-closetag'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 "Plug 'pangloss/vim-javascript'
 "Plug 'mxw/vim-jsx'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
