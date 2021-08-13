@@ -8,8 +8,8 @@ Plug 'alvan/vim-closetag'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 "Plug 'pangloss/vim-javascript'
 "Plug 'mxw/vim-jsx'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -62,6 +62,13 @@ nnoremap <C-o> :Files<CR>
 "--- Coc binds
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
+imap <C-l> <Plug>(coc-snippets-expand)
+
+"--- Snippets settings
+let g:UltiSnipsExpandTrigger="<§>"
+
+"--- C++ config
+autocmd FileType cpp nnoremap <leader>fn :!g++ -std=c++11 -o %:r % && open -a Terminal './%:r'<CR>
 
 "--- Copy paste binds 
 vnoremap <C-c> "*y
