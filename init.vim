@@ -68,7 +68,7 @@ imap <C-l> <Plug>(coc-snippets-expand)
 let g:UltiSnipsExpandTrigger="<§>"
 
 "--- C++ config
-autocmd FileType cpp nnoremap <leader>fn :!g++ -std=c++11 -o %:r % && open -a Terminal './%:r'<CR>
+autocmd FileType cpp nnoremap <leader>fn :!g++ *.cpp -o program && open -a Terminal './program'<CR>
 
 "--- Copy paste binds 
 vnoremap <C-c> "*y
