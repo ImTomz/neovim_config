@@ -44,10 +44,10 @@ set laststatus=2
 set scrolloff=10
 
 "--- Color scheme
-"colorscheme onedark
+colorscheme onedark
 set termguicolors
 set background=dark
-"let g:airline_theme='onedark'
+let g:airline_theme='onedark'
 let g:onedark_terminal_italics=1
 
 "--- Auto tag config
@@ -62,12 +62,12 @@ nnoremap <C-o> :Files<CR>
 "--- Coc binds
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
-imap <C-l> <Plug>(coc-snippets-expand)
-
 "--- Snippets settings
-let g:UltiSnipsExpandTrigger="<§>"
+"CocInstall coc-snippets
+imap <C-l> <Plug>(coc-snippets-expand)
+"python for snippets: python3 -m pip install --user --upgrade pynvim
 
-"--- C++ config
+"--- C++ build command for mac
 autocmd FileType cpp nnoremap <leader>fn :!g++ *.cpp -o program && open -a Terminal './program'<CR>
 
 "--- Copy paste binds 
@@ -75,6 +75,7 @@ vnoremap <C-c> "*y
 map <C-p> "*p
 
 "--- NerdTree
+"For icons need to install font
 map <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
