@@ -55,6 +55,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtmli,*.php,*.jsx,*.vue'
 
 "--- Fzf ctrl-o
 nnoremap <C-o> :Files<CR>
+nmap <C-b> :e#<CR>
 "set ignore files in .zshrc 
 "export FZF_DEFAULT_COMMAND='ag --nocolor --ignore={'node_modules','bower_components'} -g ""'
 "brew install the_silver_searcher
@@ -62,10 +63,17 @@ nnoremap <C-o> :Files<CR>
 "--- Coc binds
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
-"--- Snippets settings
-"CocInstall coc-snippets
+
+"Coc settings
 imap <C-l> <Plug>(coc-snippets-expand)
 "python for snippets: python3 -m pip install --user --upgrade pynvim
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-json',
+\]
 
 "--- C++ build command for mac
 autocmd FileType cpp nnoremap <leader>fn :!g++ *.cpp -o program && open -a Terminal './program'<CR>
