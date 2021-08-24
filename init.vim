@@ -43,6 +43,9 @@ set encoding=utf8
 set laststatus=2
 set scrolloff=10
 
+"Mouse usage
+set mouse=a
+
 "--- Color scheme
 colorscheme onedark
 set termguicolors
